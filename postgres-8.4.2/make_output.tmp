@@ -1,0 +1,453 @@
+make -C src all
+make[1]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src'
+make -C port all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make -C timezone all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/timezone'
+make -C ../../src/port all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/timezone'
+make -C backend all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend'
+make -C ../../src/port all
+make -C access all
+make -C bootstrap all
+make -C catalog all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access'
+make -C common all
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make -C parser all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/bootstrap'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/bootstrap'
+make -C gist all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/common'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/common'
+make -C hash all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/catalog'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/catalog'
+make -C commands all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/parser'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/parser'
+make -C executor all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/gist'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/gist'
+make -C foreign all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/hash'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/hash'
+make -C heap all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/foreign'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/foreign'
+make -C lib all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/commands'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/commands'
+make -C index all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/index'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/index'
+make -C nbtree all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/heap'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/heap'
+make -C transam all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/lib'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/lib'
+make -C libpq all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/transam'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/transam'
+make -C gin all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/libpq'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/libpq'
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/nbtree'
+make -C main all
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/nbtree'
+make -C nodes all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/executor'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/executor'
+make -C optimizer all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/main'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/main'
+make -C port all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer'
+make -C geqo all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/gin'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access/gin'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/access'
+make -C postmaster all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/nodes'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/nodes'
+make -C path all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/port'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/port'
+make -C regex all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/geqo'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/geqo'
+make -C plan all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/postmaster'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/postmaster'
+make -C rewrite all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/regex'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/regex'
+make -C storage all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/path'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/path'
+make -C prep all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage'
+make -C buffer all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/plan'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/plan'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/rewrite'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/rewrite'
+make -C util all
+make -C tcop all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/prep'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/prep'
+make -C tsearch all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/buffer'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/buffer'
+make -C file all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/tcop'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/tcop'
+make -C utils all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/util'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer/util'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/optimizer'
+make -C ../../src/timezone all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/tsearch'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/tsearch'
+make -C freespace all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/file'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/file'
+make -C ipc all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils'
+make -C adt all
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/timezone'
+make -C ../../src/port all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/freespace'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/freespace'
+make -C cache all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/ipc'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/ipc'
+make -C large_object all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/timezone'
+make -C lmgr all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/large_object'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/large_object'
+make -C page all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/cache'
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/lmgr'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/lmgr'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/cache'
+make -C smgr all
+make -C error all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/page'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/page'
+make -C fmgr all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/error'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/error'
+make -C hash all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/smgr'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage/smgr'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/storage'
+make -C init all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/fmgr'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/fmgr'
+make -C mb all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/hash'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/hash'
+make -C misc all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/init'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/init'
+make -C mmgr all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/adt'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/adt'
+make -C resowner all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb'
+make -C sort all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/misc'
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mmgr'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/misc'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mmgr'
+make -C time all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/resowner'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/resowner'
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/sort'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/sort'
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/time'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/time'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils'
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend'
+make -C backend/utils/mb/conversion_procs all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/ascii_and_mic'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/ascii_and_mic'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/cyrillic_and_mic'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/cyrillic_and_mic'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_cn_and_mic'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_cn_and_mic'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_jp_and_sjis'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_jp_and_sjis'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_kr_and_mic'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_kr_and_mic'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_tw_and_big5'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_tw_and_big5'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/latin2_and_win1250'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/latin2_and_win1250'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/latin_and_mic'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/latin_and_mic'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_ascii'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_ascii'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_big5'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_big5'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_cyrillic'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_cyrillic'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_cn'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_cn'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_jp'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_jp'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_kr'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_kr'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_tw'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_tw'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_gb18030'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_gb18030'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_gbk'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_gbk'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859_1'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859_1'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_johab'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_johab'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_sjis'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_sjis'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_win'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_win'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_uhc'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_uhc'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_jis_2004'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_euc_jis_2004'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_shift_jis_2004'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/utf8_and_shift_jis_2004'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_jis_2004_and_shift_jis_2004'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs/euc_jis_2004_and_shift_jis_2004'
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/utils/mb/conversion_procs'
+make -C backend/snowball all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/snowball'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/backend/snowball'
+make -C include all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/include'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/include'
+make -C interfaces all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg'
+make -C include all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/include'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/include'
+make -C pgtypeslib all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/pgtypeslib'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/pgtypeslib'
+make -C ecpglib all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/ecpglib'
+make -C ../../../../src/interfaces/libpq all
+make -C ../../../../src/interfaces/ecpg/pgtypeslib all
+make[5]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/pgtypeslib'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/pgtypeslib'
+make[5]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/ecpglib'
+make -C compatlib all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/compatlib'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/compatlib'
+make -C preproc all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/preproc'
+make -C ../../../../src/port all
+make[5]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[5]: Nothing to be done for `all'.
+make[5]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg/preproc'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/ecpg'
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces'
+make -C bin all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/initdb'
+make -C ../../../src/port all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/initdb'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_ctl'
+make -C ../../../src/interfaces/libpq all
+make -C ../../../src/port all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_ctl'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_dump'
+make -C ../../../src/interfaces/libpq all
+make -C ../../../src/port all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_dump'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/psql'
+make -C ../../../src/interfaces/libpq all
+make -C ../../../src/port all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/psql'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/scripts'
+make -C ../../../src/interfaces/libpq all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/interfaces/libpq'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/scripts'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_config'
+make -C ../../../src/port all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_config'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_controldata'
+make -C ../../../src/port all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_controldata'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_resetxlog'
+make -C ../../../src/port all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin/pg_resetxlog'
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/bin'
+make -C pl all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/pl'
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/pl/plpgsql'
+make -C src all
+make[4]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/pl/plpgsql/src'
+make[4]: Nothing to be done for `all'.
+make[4]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/pl/plpgsql/src'
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/pl/plpgsql'
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/pl'
+make -C makefiles all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/makefiles'
+make[2]: Nothing to be done for `all'.
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/makefiles'
+make -C test/regress all
+make[2]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/test/regress'
+make -C ../../../src/port all
+rm -rf ./testtablespace
+mkdir ./testtablespace
+make[3]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[3]: Nothing to be done for `all'.
+make[3]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/port'
+make[2]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src/test/regress'
+make[1]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/src'
+make -C config all
+make[1]: Entering directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/config'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/ubuntu/my_fa12/hw5/postgres-8.4.2/config'
+All of PostgreSQL successfully made. Ready to install.

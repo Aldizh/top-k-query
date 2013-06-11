@@ -1,0 +1,1482 @@
+LOG:  using buffer replacement policy: clock
+LOG:  database system was shut down at 2012-12-03 18:26:59 PST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.845018 elapsed 0.544034 user 1.908120 system sec
+	!	[0.544034 user 1.952122 sys total]
+	!	63440/0 [63504/0] filesystem blocks in/out
+	!	0/19093 [0/19603] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	36/326 [38/330] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3958 read,          0 written, buffer hit rate = 2.61%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(10, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.596370 elapsed 1.588099 user 1.616101 system sec
+	!	[1.588099 user 1.652103 sys total]
+	!	96/27344 [96/27344] filesystem blocks in/out
+	!	0/7704 [0/8217] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	4/145 [4/148] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3948 read,          0 written, buffer hit rate = 2.97%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.326291 elapsed 0.816051 user 1.440090 system sec
+	!	[0.816051 user 1.472092 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19214 [0/19728] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/80 [0/86] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(20, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.323400 elapsed 1.652103 user 1.304082 system sec
+	!	[1.652103 user 1.344084 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7812 [0/8326] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/166 [0/169] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 20;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	4.225637 elapsed 2.676167 user 1.320082 system sec
+	!	[2.676167 user 1.356084 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19196 [0/19711] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/165 [0/168] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(50, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.379738 elapsed 1.712107 user 1.384086 system sec
+	!	[1.716107 user 1.416088 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7802 [0/8317] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/143 [0/150] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 50;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	10.888275 elapsed 4.900306 user 1.992124 system sec
+	!	[4.908306 user 2.024126 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19213 [0/19730] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/714 [0/717] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(100, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	8.699074 elapsed 1.784111 user 2.400150 system sec
+	!	[1.788111 user 2.436152 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7813 [0/8329] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/688 [0/693] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 100;
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 8681) running in data directory "/home/ubuntu/pgsql/data"?
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  using buffer replacement policy: clock
+LOG:  database system was shut down at 2012-12-05 22:34:04 PST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.978020 elapsed 0.460028 user 1.448090 system sec
+	!	[0.460028 user 1.516094 sys total]
+	!	0/0 [0/184] filesystem blocks in/out
+	!	0/19116 [0/19772] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/76 [0/82] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3958 read,          0 written, buffer hit rate = 2.49%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(10, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.205643 elapsed 1.708106 user 1.280080 system sec
+	!	[1.708106 user 1.316082 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7764 [0/8281] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/127 [0/130] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.414247 elapsed 0.900056 user 1.448090 system sec
+	!	[0.900056 user 1.484092 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19214 [0/19732] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/93 [0/102] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(20, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.269764 elapsed 1.692105 user 1.252078 system sec
+	!	[1.692105 user 1.288080 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7809 [0/8329] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/160 [0/166] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 20;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	4.178393 elapsed 2.544159 user 1.400088 system sec
+	!	[2.544159 user 1.440090 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19209 [0/19729] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/168 [0/177] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(50, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.267961 elapsed 1.716107 user 1.316082 system sec
+	!	[1.716107 user 1.352084 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7810 [0/8329] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/134 [0/139] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 50;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	6.770052 elapsed 4.992312 user 1.496094 system sec
+	!	[4.992312 user 1.536096 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19212 [0/19730] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/265 [0/269] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(100, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.209046 elapsed 1.644103 user 1.376086 system sec
+	!	[1.652103 user 1.404087 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7802 [0/8316] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/125 [0/130] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 100;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.734397 elapsed 0.620039 user 1.048065 system sec
+	!	[0.628039 user 1.052065 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19145 [0/19661] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/75 [0/79] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(10, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.129902 elapsed 1.648103 user 1.304082 system sec
+	!	[1.648103 user 1.344084 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7751 [0/8270] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/113 [0/118] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3961 read,          0 written, buffer hit rate = 2.65%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.510682 elapsed 1.052065 user 1.332083 system sec
+	!	[1.052065 user 1.372085 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19192 [0/19715] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	1/107 [1/114] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(20, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.405522 elapsed 1.620101 user 1.512094 system sec
+	!	[1.620101 user 1.548096 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7789 [0/8314] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/147 [0/150] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 20;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	4.161130 elapsed 2.536158 user 1.464092 system sec
+	!	[2.536158 user 1.504094 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19205 [0/19728] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/175 [0/180] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(50, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.197173 elapsed 1.584099 user 1.472092 system sec
+	!	[1.584099 user 1.516094 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7805 [0/8329] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/124 [0/128] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 50;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	6.721072 elapsed 4.860303 user 1.572098 system sec
+	!	[4.860303 user 1.608100 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19208 [0/19730] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/288 [0/293] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(100, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.078495 elapsed 1.600100 user 1.336083 system sec
+	!	[1.600100 user 1.372085 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7808 [0/8329] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/118 [0/121] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 100;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.204115 elapsed 0.036002 user 0.104007 system sec
+	!	[0.036002 user 0.116007 sys total]
+	!	5024/0 [5024/0] filesystem blocks in/out
+	!	0/1128 [0/1646] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	2/23 [2/26] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:        343 read,          0 written, buffer hit rate = 25.60%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, COUNT(*) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.165060 elapsed 0.032002 user 0.128008 system sec
+	!	[0.036002 user 0.136008 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1964 [0/2471] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/7 [0/10] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          3 read,          0 written, buffer hit rate = 99.35%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 2) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.148209 elapsed 0.024001 user 0.120007 system sec
+	!	[0.024001 user 0.156009 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1965 [0/2472] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/5 [0/11] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 4) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.395872 elapsed 0.024001 user 0.136008 system sec
+	!	[0.024001 user 0.168010 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1966 [0/2473] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/36 [0/39] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 2) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.222594 elapsed 0.036002 user 0.084006 system sec
+	!	[0.040002 user 0.096006 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1967 [0/2474] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/21 [0/28] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 8) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.265413 elapsed 0.044002 user 0.072005 system sec
+	!	[0.044002 user 0.084005 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1970 [0/2477] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/28 [0/33] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 4) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.233301 elapsed 0.036002 user 0.080005 system sec
+	!	[0.036002 user 0.092005 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1970 [0/2477] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/29 [0/33] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 700, 2) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.250769 elapsed 0.044002 user 0.084006 system sec
+	!	[0.044002 user 0.096006 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1969 [0/2477] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/26 [0/31] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 16) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.226184 elapsed 0.032002 user 0.080005 system sec
+	!	[0.032002 user 0.092005 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1973 [0/2480] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/26 [0/33] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 8) as count from numbers1 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.096887 elapsed 0.032002 user 0.016001 system sec
+	!	[0.032002 user 0.028001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1109 [0/1616] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/11 [0/16] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, COUNT(*) as count from numbers1 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.185742 elapsed 0.028001 user 0.060004 system sec
+	!	[0.028001 user 0.072004 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1966 [0/2473] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/17 [0/22] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 2) as count from numbers1 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.189103 elapsed 0.028001 user 0.068005 system sec
+	!	[0.028001 user 0.080005 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1965 [0/2472] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/24 [0/28] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 4) as count from numbers1 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.181410 elapsed 0.048003 user 0.040003 system sec
+	!	[0.052003 user 0.048003 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1968 [0/2475] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/21 [0/25] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 300, 2) as count from numbers1 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.181093 elapsed 0.028001 user 0.064004 system sec
+	!	[0.028001 user 0.076004 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1965 [0/2472] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/19 [0/24] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 8) as count from numbers1 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.176648 elapsed 0.016001 user 0.072005 system sec
+	!	[0.016001 user 0.084005 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/1970 [0/2477] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/18 [0/23] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 300, 4) as count from numbers1 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.078551 elapsed 0.012000 user 0.012001 system sec
+	!	[0.012000 user 0.024001 sys total]
+	!	640/0 [640/0] filesystem blocks in/out
+	!	0/526 [0/1033] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	1/6 [1/11] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:         40 read,          0 written, buffer hit rate = 78.61%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, COUNT(*) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.035760 elapsed 0.004000 user 0.016001 system sec
+	!	[0.008000 user 0.024001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/588 [0/1096] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 2) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.043518 elapsed 0.004000 user 0.016001 system sec
+	!	[0.004000 user 0.028001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/588 [0/1096] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 4) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.042439 elapsed 0.008000 user 0.016001 system sec
+	!	[0.012000 user 0.024001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/589 [0/1097] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 2) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.037892 elapsed 0.012000 user 0.012001 system sec
+	!	[0.012000 user 0.024001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/588 [0/1096] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/3 [0/8] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 8) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.046315 elapsed 0.004000 user 0.020001 system sec
+	!	[0.008000 user 0.028001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/593 [0/1100] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/5 [0/11] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 4) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.040170 elapsed 0.004000 user 0.016001 system sec
+	!	[0.004000 user 0.028001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/591 [0/1099] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 700, 2) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.047158 elapsed 0.000000 user 0.024001 system sec
+	!	[0.008000 user 0.028001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/594 [0/1101] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 16) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.046720 elapsed 0.004000 user 0.020001 system sec
+	!	[0.012000 user 0.024001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/594 [0/1102] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/6 [0/11] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 8) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.038870 elapsed 0.004000 user 0.016001 system sec
+	!	[0.008000 user 0.024001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/597 [0/1104] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 1300, 2) as count from numbers2 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.030073 elapsed 0.008000 user 0.008001 system sec
+	!	[0.012000 user 0.016001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/523 [0/1030] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [0/8] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, COUNT(*) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.033638 elapsed 0.008000 user 0.012001 system sec
+	!	[0.012000 user 0.020001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/589 [0/1096] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/3 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 2) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.033057 elapsed 0.008000 user 0.008001 system sec
+	!	[0.008000 user 0.020001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/588 [0/1095] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/3 [0/8] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 4) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.032980 elapsed 0.008000 user 0.008001 system sec
+	!	[0.008000 user 0.020001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/590 [0/1097] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/3 [0/7] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 300, 2) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.035080 elapsed 0.008000 user 0.008001 system sec
+	!	[0.008000 user 0.020001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/589 [0/1096] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/3 [0/8] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 8) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.034065 elapsed 0.012000 user 0.004001 system sec
+	!	[0.012000 user 0.016001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/594 [0/1101] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/3 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 300, 4) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.033045 elapsed 0.004000 user 0.012001 system sec
+	!	[0.004000 user 0.024001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/593 [0/1100] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/3 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 700, 2) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.043685 elapsed 0.004000 user 0.016001 system sec
+	!	[0.004000 user 0.028001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/593 [0/1100] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/5 [0/10] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 16) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.034371 elapsed 0.012000 user 0.008001 system sec
+	!	[0.012000 user 0.020001 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/594 [0/1101] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [0/9] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 300, 8) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.045127 elapsed 0.000000 user 0.020002 system sec
+	!	[0.000000 user 0.032002 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/597 [0/1104] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/5 [0/11] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 1300, 2) as count from numbers2 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	6.306336 elapsed 1.892118 user 1.184074 system sec
+	!	[1.892118 user 1.196074 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7052 [0/7559] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/701 [0/707] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3922 read,          0 written, buffer hit rate = 3.61%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.856125 elapsed 0.644040 user 1.020064 system sec
+	!	[0.644040 user 1.032064 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/18465 [0/18969] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/389 [0/393] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3922 read,          0 written, buffer hit rate = 3.61%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	4.376651 elapsed 0.640040 user 1.300081 system sec
+	!	[0.648040 user 1.332083 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19197 [0/19701] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/391 [0/402] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3922 read,          0 written, buffer hit rate = 3.61%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 4) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.238440 elapsed 0.548034 user 1.316082 system sec
+	!	[0.552034 user 1.356084 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19231 [0/19735] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/126 [0/133] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3922 read,          0 written, buffer hit rate = 3.61%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.288165 elapsed 0.692043 user 1.296081 system sec
+	!	[0.692043 user 1.332083 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19207 [0/19728] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/152 [0/155] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 8) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.679528 elapsed 0.608038 user 1.384087 system sec
+	!	[0.608038 user 1.424089 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19197 [0/19719] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/280 [0/288] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 4) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.617489 elapsed 0.576036 user 1.340083 system sec
+	!	[0.584036 user 1.372085 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19198 [0/19718] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/185 [0/191] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 700, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.554575 elapsed 0.640040 user 1.556098 system sec
+	!	[0.640040 user 1.600100 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19201 [0/19743] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/229 [0/240] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 100, 16) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	6.411912 elapsed 0.728046 user 1.444090 system sec
+	!	[0.736046 user 1.484092 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19226 [0/19747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/509 [0/520] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3965 read,          0 written, buffer hit rate = 2.56%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 8) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.689723 elapsed 0.548034 user 1.288081 system sec
+	!	[0.548034 user 1.328083 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19222 [0/19742] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/172 [0/181] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 1300, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.839229 elapsed 0.552034 user 1.232077 system sec
+	!	[0.552034 user 1.268079 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19217 [0/19738] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/68 [0/76] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 700, 4) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.877300 elapsed 0.580036 user 1.236077 system sec
+	!	[0.580036 user 1.272079 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19217 [0/19739] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/65 [0/72] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 2300, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.244876 elapsed 0.792049 user 1.252078 system sec
+	!	[0.792049 user 1.292080 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19220 [0/19742] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/92 [0/99] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 300, 16) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.923142 elapsed 0.572035 user 1.212076 system sec
+	!	[0.572035 user 1.248078 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19226 [0/19748] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/94 [0/98] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 1300, 4) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.969935 elapsed 0.612038 user 1.244078 system sec
+	!	[0.612038 user 1.280080 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19227 [0/19748] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/78 [0/83] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3952 read,          0 written, buffer hit rate = 2.88%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 700, 8) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.932995 elapsed 0.564035 user 1.224076 system sec
+	!	[0.564035 user 1.260078 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19229 [0/19749] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/84 [0/88] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 4300, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.937061 elapsed 0.668041 user 1.156072 system sec
+	!	[0.668041 user 1.196074 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19233 [0/19753] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/76 [0/81] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3967 read,          0 written, buffer hit rate = 2.51%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(10, 2300, 4) as count from numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.554153 elapsed 1.584099 user 1.644103 system sec
+	!	[1.584099 user 1.684105 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7807 [0/8327] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/165 [0/168] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3952 read,          0 written, buffer hit rate = 2.88%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.821922 elapsed 0.552034 user 1.212076 system sec
+	!	[0.552034 user 1.256078 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19210 [0/19730] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/69 [0/83] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3952 read,          0 written, buffer hit rate = 2.88%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.705547 elapsed 0.488030 user 1.032064 system sec
+	!	[0.492030 user 1.068066 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19211 [0/19731] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/82 [0/90] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 4) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.515603 elapsed 0.396024 user 1.080067 system sec
+	!	[0.396024 user 1.116069 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19214 [0/19732] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/57 [0/60] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 300, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.619380 elapsed 0.512032 user 1.064067 system sec
+	!	[0.512032 user 1.104069 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19215 [0/19733] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/57 [0/60] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 8) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.552199 elapsed 0.500031 user 1.024064 system sec
+	!	[0.500031 user 1.064066 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19214 [0/19734] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/59 [0/62] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 300, 4) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.598414 elapsed 0.496031 user 1.036064 system sec
+	!	[0.500031 user 1.068066 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19216 [0/19735] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/54 [0/57] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 700, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.616405 elapsed 0.632039 user 1.908119 system sec
+	!	[0.632039 user 1.956122 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19228 [0/19747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/92 [0/95] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 100, 16) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.088013 elapsed 0.640040 user 1.236078 system sec
+	!	[0.644040 user 1.280080 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19227 [0/19747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/94 [0/98] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3967 read,          0 written, buffer hit rate = 2.51%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 300, 8) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.063656 elapsed 0.584036 user 1.224077 system sec
+	!	[0.584036 user 1.268079 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19224 [0/19743] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/100 [0/104] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3951 read,          0 written, buffer hit rate = 2.90%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT num, APPROX_COUNT(5, 1300, 2) as count from numbers3 GROUP BY num ORDER BY count DESC limit 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	1.593956 elapsed 0.564035 user 1.000063 system sec
+	!	[0.564035 user 1.012063 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19184 [0/19702] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/50 [0/53] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3949 read,          0 written, buffer hit rate = 2.83%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(10, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.236637 elapsed 1.624101 user 1.364085 system sec
+	!	[1.624101 user 1.400087 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7780 [0/8300] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/121 [0/124] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	2.353100 elapsed 0.968060 user 1.324083 system sec
+	!	[0.968060 user 1.364085 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19199 [0/19719] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/76 [0/83] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(20, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.232629 elapsed 1.604100 user 1.344084 system sec
+	!	[1.604100 user 1.380086 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7797 [0/8316] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/152 [0/156] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 20;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	4.229706 elapsed 2.688168 user 1.348084 system sec
+	!	[2.692168 user 1.380086 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19204 [0/19725] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/157 [0/160] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(50, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.153122 elapsed 1.672104 user 1.308082 system sec
+	!	[1.672104 user 1.348084 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7809 [0/8328] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/99 [0/105] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3953 read,          0 written, buffer hit rate = 2.85%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 50;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	6.606094 elapsed 4.924307 user 1.440090 system sec
+	!	[4.924307 user 1.480092 sys total]
+	!	0/0 [0/0] filesystem blocks in/out
+	!	0/19219 [0/19741] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/193 [0/196] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3950 read,          0 written, buffer hit rate = 2.81%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select num, approx_count(100, 1000, 4) as C from numbers3 group by num order by C desc;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	3.174486 elapsed 1.684105 user 1.284080 system sec
+	!	[1.684105 user 1.320082 sys total]
+	!	0/27344 [0/27344] filesystem blocks in/out
+	!	0/7820 [0/8341] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/110 [0/113] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:       3967 read,          0 written, buffer hit rate = 2.51%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:       4454 read,       4454 written
+STATEMENT:  SELECT num, COUNT(*) AS count FROM numbers3 GROUP BY num ORDER BY count DESC limit 100;
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  using buffer replacement policy: clock
+LOG:  database system was shut down at 2012-12-12 20:55:49 PST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+ERROR:  relation "nums" does not exist at character 15
+STATEMENT:  select * from nums;
+ERROR:  syntax error at or near "-" at character 19
+STATEMENT:  select * from nums-small
+	;
+ERROR:  relation "nums_small" does not exist at character 15
+STATEMENT:  select * from nums_small;
+ERROR:  relation "data_small" does not exist at character 15
+STATEMENT:  select * from data_small;
+ERROR:  relation "data1" does not exist at character 15
+STATEMENT:  select * from data1;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.960656 elapsed 0.012001 user 0.092006 system sec
+	!	[0.020001 user 0.168010 sys total]
+	!	2112/0 [3208/40] filesystem blocks in/out
+	!	5/462 [9/1067] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	34/6 [54/18] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:         45 read,          0 written, buffer hit rate = 93.99%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  SELECT n.nspname as "Schema",
+	  c.relname as "Name",
+	  CASE c.relkind WHEN 'r' THEN 'table' WHEN 'v' THEN 'view' WHEN 'i' THEN 'index' WHEN 'S' THEN 'sequence' WHEN 's' THEN 'special' END as "Type",
+	  pg_catalog.pg_get_userbyid(c.relowner) as "Owner"
+	FROM pg_catalog.pg_class c
+	     LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+	WHERE c.relkind IN ('r','v','S','')
+	      AND n.nspname <> 'pg_catalog'
+	      AND n.nspname <> 'information_schema'
+	      AND n.nspname !~ '^pg_toast'
+	  AND pg_catalog.pg_table_is_visible(c.oid)
+	ORDER BY 1,2;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.598083 elapsed 0.048003 user 0.172011 system sec
+	!	[0.068004 user 0.344021 sys total]
+	!	5040/0 [8248/48] filesystem blocks in/out
+	!	0/645 [9/1719] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	18/132 [73/155] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:        317 read,          0 written, buffer hit rate = 2.16%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select * from numbers1;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.138159 elapsed 0.012001 user 0.004000 system sec
+	!	[0.080005 user 0.348021 sys total]
+	!	112/0 [8360/56] filesystem blocks in/out
+	!	0/22 [9/1741] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	4/0 [78/157] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          6 read,          0 written, buffer hit rate = 98.15%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select count(*) from numbers1;
+ERROR:  syntax error at or near "form" at character 10
+STATEMENT:  select * form numbers1 LIMIT 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.001088 elapsed 0.000000 user 0.004000 system sec
+	!	[0.080005 user 0.356022 sys total]
+	!	0/0 [8360/72] filesystem blocks in/out
+	!	0/2 [9/1743] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/0 [80/163] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select * from numbers1 LIMIT 5;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.107568 elapsed 0.012000 user 0.024001 system sec
+	!	[0.092005 user 0.380023 sys total]
+	!	0/0 [8360/80] filesystem blocks in/out
+	!	0/4 [9/1747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/37 [81/202] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          1 read,          0 written, buffer hit rate = 99.69%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select * from numbers1 where num > 100;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.078272 elapsed 0.016001 user 0.016001 system sec
+	!	[0.108006 user 0.400025 sys total]
+	!	0/0 [8360/96] filesystem blocks in/out
+	!	0/0 [9/1747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/16 [82/220] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select * from numbers1 where num > 1000;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.052451 elapsed 0.032002 user 0.000000 system sec
+	!	[0.140008 user 0.400025 sys total]
+	!	0/0 [8360/96] filesystem blocks in/out
+	!	0/0 [9/1747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/5 [83/227] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select count(*) from numbers1 where num > 1000;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.073104 elapsed 0.032002 user 0.000000 system sec
+	!	[0.172010 user 0.400025 sys total]
+	!	0/0 [8360/96] filesystem blocks in/out
+	!	0/0 [9/1747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/10 [84/239] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select count(*) from numbers1 where num > 10000;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.035413 elapsed 0.024002 user 0.000000 system sec
+	!	[0.196012 user 0.400025 sys total]
+	!	0/0 [8360/96] filesystem blocks in/out
+	!	0/0 [9/1747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/2 [85/243] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select count(*) from numbers1 where num > 5000;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.044384 elapsed 0.028002 user 0.000000 system sec
+	!	[0.224014 user 0.400025 sys total]
+	!	0/0 [8360/96] filesystem blocks in/out
+	!	0/0 [9/1747] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/3 [86/248] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select count(*) from numbers1 where num > 8000;
+ERROR:  column "id" does not exist at character 56
+STATEMENT:  select count(*) from numbers1 where num > 100 GROUP BY id;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.096566 elapsed 0.016001 user 0.032002 system sec
+	!	[0.240015 user 0.436027 sys total]
+	!	0/0 [8360/112] filesystem blocks in/out
+	!	0/65 [9/1813] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/18 [88/273] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select count(*) from numbers1 where num > 100 GROUP BY num;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.078641 elapsed 0.036002 user 0.004000 system sec
+	!	[0.280017 user 0.440027 sys total]
+	!	0/0 [8360/128] filesystem blocks in/out
+	!	0/49 [9/1862] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/11 [89/287] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select count(*) from numbers1 where num > 100 GROUP BY num having count(*) > 1000;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.122779 elapsed 0.048003 user 0.012001 system sec
+	!	[0.328020 user 0.452028 sys total]
+	!	0/0 [8360/128] filesystem blocks in/out
+	!	0/24 [9/1886] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/14 [90/303] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select count(*) from numbers1 where num > 100 GROUP BY num having count(*) > 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.060187 elapsed 0.024002 user 0.016001 system sec
+	!	[0.352022 user 0.468029 sys total]
+	!	0/0 [8360/136] filesystem blocks in/out
+	!	0/18 [9/1904] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/6 [91/311] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select DISTINCT num from numbers1 where num > 100 GROUP BY num having count(*) > 10;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.077538 elapsed 0.024001 user 0.008000 system sec
+	!	[0.376023 user 0.476029 sys total]
+	!	0/0 [8360/144] filesystem blocks in/out
+	!	0/14 [9/1918] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/4 [92/317] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select DISTINCT num from numbers1 where num > 100 GROUP BY num having count(*) > 100;
+LOG:  QUERY STATISTICS
+DETAIL:  ! system usage stats:
+	!	0.091763 elapsed 0.044003 user 0.000000 system sec
+	!	[0.420026 user 0.476029 sys total]
+	!	0/0 [8360/152] filesystem blocks in/out
+	!	0/14 [9/1932] page faults/reclaims, 0 [0] swaps
+	!	0 [0] signals rcvd, 0/0 [0/0] messages rcvd/sent
+	!	0/9 [93/328] voluntary/involuntary context switches
+	! buffer usage stats:
+	!	Shared blocks:          0 read,          0 written, buffer hit rate = 100.00%
+	!	Local  blocks:          0 read,          0 written, buffer hit rate = 0.00%
+	!	Direct blocks:          0 read,          0 written
+STATEMENT:  select DISTINCT num from numbers1 where num > 100 GROUP BY num having count(*) > 50;
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
